@@ -1,0 +1,16 @@
+{
+  "name": "@goaegis/mcp-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/mcp-client/index.js",
+  "types": "./index.ts",
+  "dependencies": {
+    "@goaegis/shared-types": "workspace:*"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json --noEmit false --outDir dist",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "node contract.test.mjs"
+  }
+}

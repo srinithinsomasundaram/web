@@ -1,0 +1,10 @@
+src/**
+test-fixtures/**
+.vscode/**
+scripts/**
+tsconfig.json
+*.ts
+*.map
+!dist/**
+!media/**
+!README.md

@@ -1,0 +1,10 @@
+{
+  "name": "@goaegis/dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "echo \"dashboard placeholder\"",
+    "check": "echo \"dashboard placeholder\"",
+    "test": "echo \"dashboard placeholder\""
+  }
+}

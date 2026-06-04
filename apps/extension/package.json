@@ -1,0 +1,96 @@
+{
+  "name": "@goaegis/extension",
+  "displayName": "GoAegis",
+  "description": "AI security scanning, review, and remediation for VS Code.",
+  "version": "0.1.0",
+  "publisher": "goaegis",
+  "type": "module",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Security",
+    "AI",
+    "Other"
+  ],
+  "icon": "media/goaegis.svg",
+  "main": "./dist/apps/extension/src/extension.js",
+  "activationEvents": [
+    "onCommand:goaegis.saveAndScan",
+    "onCommand:goaegis.scanWorkspace",
+    "onCommand:goaegis.reviewCurrentFile",
+    "onCommand:goaegis.reviewCurrentPullRequest",
+    "onCommand:goaegis.installScanners",
+    "onCommand:goaegis.installBackendPrereqs",
+    "onCommand:goaegis.openFinding",
+    "onView:goaegis.securityPanel",
+    "onView:goaegis.reviewPanel"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "goaegis",
+          "title": "GoAegis",
+          "icon": "media/goaegis.svg"
+        }
+      ]
+    },
+    "views": {
+      "goaegis": [
+        {
+          "id": "goaegis.securityPanel",
+          "name": "Security Panel"
+        },
+        {
+          "id": "goaegis.reviewPanel",
+          "name": "PR Review"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "goaegis.saveAndScan",
+        "title": "GoAegis: Save and Scan"
+      },
+      {
+        "command": "goaegis.scanWorkspace",
+        "title": "GoAegis: Scan Workspace"
+      },
+      {
+        "command": "goaegis.reviewCurrentFile",
+        "title": "GoAegis: Review Current File"
+      },
+      {
+        "command": "goaegis.reviewCurrentPullRequest",
+        "title": "GoAegis: Review Current PR"
+      },
+      {
+        "command": "goaegis.openFinding",
+        "title": "GoAegis: Open Finding"
+      },
+      {
+        "command": "goaegis.applyFix",
+        "title": "GoAegis: Fix Vulnerability"
+      },
+      {
+        "command": "goaegis.installScanners",
+        "title": "GoAegis: Install Scanners"
+      },
+      {
+        "command": "goaegis.installBackendPrereqs",
+        "title": "GoAegis: Install Backend Prerequisites"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json --noEmit false --outDir dist",
+    "package": "npm run build && node ./scripts/package-extension.mjs",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "node src/services/githubContext.contract.mjs"
+  },
+  "dependencies": {
+    "@goaegis/mcp-client": "workspace:*",
+    "@goaegis/shared-types": "workspace:*"
+  }
+}

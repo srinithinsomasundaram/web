@@ -1,0 +1,12 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "GoAegis CI placeholder"
+

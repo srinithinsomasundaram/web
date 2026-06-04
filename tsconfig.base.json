@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022", "DOM"],
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@goaegis/shared-types": ["packages/shared-types/index.ts"],
+      "@goaegis/logger": ["packages/logger/index.ts"],
+      "@goaegis/sdk": ["packages/sdk/index.ts"],
+      "@goaegis/mcp-client": ["packages/mcp-client/index.ts"],
+      "@goaegis/mcp-server": ["apps/mcp-server/src/index.ts"],
+      "@goaegis/security-engine": ["packages/security-engine/index.ts"],
+      "@goaegis/ai-engine": ["packages/ai-engine/index.ts"],
+      "@goaegis/policy-engine": ["packages/policy-engine/index.ts"]
+    }
+  }
+}

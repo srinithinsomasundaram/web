@@ -1,0 +1,17 @@
+{
+  "name": "@goaegis/mcp-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/apps/mcp-server/src/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json --noEmit false --outDir dist",
+    "start": "npm run build && node dist/apps/mcp-server/src/main.js",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@goaegis/sdk": "workspace:*",
+    "@goaegis/shared-types": "workspace:*"
+  }
+}

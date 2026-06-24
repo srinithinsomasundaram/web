@@ -209,22 +209,6 @@ const jobs: Job[] = [
     compensation: "Month 1 unpaid · Month 2+ paid + performance incentives · Min. 3-month commitment",
   },
   {
-    title: "AI Automation Intern",
-    mission: "Build and test AI-powered automation workflows for real client use cases.",
-    responsibilities: [
-      "Assist in designing and building AI automation flows",
-      "Test and document AI tools and integrations",
-      "Research AI platforms and evaluate fit for client needs",
-      "Support the team with prompt engineering and workflow setup",
-      "Help troubleshoot and improve existing automations",
-    ],
-    output: "Working automation workflows and documented processes",
-    location: "Remote",
-    experience: "No experience required",
-    type: "Internship",
-    compensation: "Month 1 unpaid · Month 2+ paid + performance incentives · Min. 3-month commitment",
-  },
-  {
     title: "Client Acquisition Consultant",
     mission: "Drive performance-based client growth.",
     responsibilities: [

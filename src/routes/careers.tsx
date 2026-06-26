@@ -212,6 +212,22 @@ const jobs: Job[] = [
     compensation: "Month 1 unpaid · Month 2+ paid + performance incentives · Min. 3-month commitment",
   },
   {
+    title: "Full Stack Intern",
+    mission: "Build and ship product features across the full stack at Yesp Studio.",
+    responsibilities: [
+      "Develop and maintain frontend and backend features",
+      "Work with React, Node.js, and cloud infrastructure",
+      "Collaborate with senior engineers on architecture and code reviews",
+      "Write clean, tested, and well-documented code",
+      "Contribute to internal tools and client-facing products",
+    ],
+    output: "Shipped features and production-ready code",
+    location: "Remote",
+    experience: "No experience required",
+    type: "Internship",
+    compensation: "Month 1 unpaid · Month 2+ paid + performance incentives · Min. 3-month commitment",
+  },
+  {
     title: "Client Acquisition Consultant",
     mission: "Drive performance-based client growth.",
     responsibilities: [

@@ -1,4 +1,5 @@
-const ZOHO_TOKEN_URL = "https://accounts.zoho.com/oauth/v2/token";
+const ZOHO_ACCOUNTS_DOMAIN = process.env.ZOHO_ACCOUNTS_DOMAIN ?? "accounts.zoho.in";
+const ZOHO_TOKEN_URL = `https://${ZOHO_ACCOUNTS_DOMAIN}/oauth/v2/token`;
 
 async function getAccessToken(): Promise<string> {
   const clientId = process.env.ZOHO_CLIENT_ID;

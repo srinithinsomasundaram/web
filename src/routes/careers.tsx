@@ -213,10 +213,10 @@ const jobs: Job[] = [
   },
   {
     title: "Full Stack Intern",
-    mission: "Build and ship product features across the full stack at Yesp Studio.",
+    mission: "Build and ship product features across the MERN stack at Yesp Studio.",
     responsibilities: [
-      "Develop and maintain frontend and backend features",
-      "Work with React, Node.js, and cloud infrastructure",
+      "Develop and maintain frontend and backend features using MongoDB, Express, React, and Node.js",
+      "Build RESTful APIs and integrate them with React frontends",
       "Collaborate with senior engineers on architecture and code reviews",
       "Write clean, tested, and well-documented code",
       "Contribute to internal tools and client-facing products",

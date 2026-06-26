@@ -4,6 +4,7 @@ import { z } from "zod";
 import { PageHero, Section } from "@/components/site/Section";
 import { ArrowUpRight } from "lucide-react";
 import { escapeHtml, sendResendEmail } from "@/lib/resend";
+import { createZohoLead } from "@/lib/zoho";
 import { buildSeoMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
@@ -29,6 +30,8 @@ export const Route = createFileRoute("/contact")({
           const safeIndustry = escapeHtml(industry);
           const safeSize = escapeHtml(size);
           const safeRequirements = escapeHtml(requirements).replaceAll("\n", "<br />");
+
+          await createZohoLead({ name, email, company, industry, size, requirements });
 
           await sendResendEmail({
             from: "Yesp Studio No Reply <services@yespstudio.com>",

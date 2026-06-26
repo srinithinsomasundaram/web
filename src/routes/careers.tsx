@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import careersImg from "@/assets/careers-team.jpg";
 import { escapeHtml, sendResendEmail } from "@/lib/resend";
+import { createZohoContact } from "@/lib/zoho";
 import { buildSeoMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/careers")({
@@ -87,6 +88,8 @@ export const Route = createFileRoute("/careers")({
             <p>${safeMessage}</p>
             <p><strong>Resume:</strong> ${safeResumeName}</p>
           `;
+
+          await createZohoContact({ fullName, email, phone: phone || undefined, linkedin: linkedin || undefined, role, message });
 
           await sendResendEmail({
             from: "Yesp Studio No Reply <carrier@yespstudio.com>",

@@ -17,12 +17,20 @@ async function getAccessToken(): Promise<string> {
     grant_type: "refresh_token",
   });
 
-  const res = await fetch(ZOHO_TOKEN_URL, { method: "POST", body: params });
+  const res = await fetch(ZOHO_TOKEN_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: params.toString(),
+  });
+
+  const rawText = await res.text();
+  console.log("[zoho] token response:", res.status, rawText);
+
   if (!res.ok) {
-    throw new Error(`Zoho token request failed (${res.status}): ${await res.text()}`);
+    throw new Error(`Zoho token request failed (${res.status}): ${rawText}`);
   }
 
-  const json = (await res.json()) as { access_token?: string; error?: string };
+  const json = JSON.parse(rawText) as { access_token?: string; error?: string };
   if (!json.access_token) {
     throw new Error(`Zoho token error: ${json.error ?? "no access_token returned"}`);
   }
